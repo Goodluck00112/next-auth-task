@@ -1,36 +1,113 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js Authentication System
 
-## Getting Started
+A **simple authentication system** built with **Next.js 16+**, **TypeScript**, and **Tailwind CSS**, demonstrating a full **login → forgot password → OTP verification → protected dashboard** flow. This project showcases modern React development practices, form validation, and route protection.  
 
-First, run the development server:
+---
 
+## **Features**
+
+- **Login Page**  
+  Users can log in with email and password. Form validation ensures correct email format and minimum password length.
+
+- **Forgot Password Flow**  
+  Users can request a password reset using their email.
+
+- **OTP Verification**  
+  Simulates sending a one-time password (OTP) and validates it before granting access.
+
+- **Protected Dashboard**  
+  Only accessible after successful login or OTP verification.
+
+- **Route Protection**  
+  Middleware ensures authenticated users can access protected routes.
+
+- **Form Validation**  
+  Uses **React Hook Form** and **Zod** for robust client-side validation.
+
+- **Clean UI**  
+  Designed with **Tailwind CSS** for a modern, responsive interface.
+
+---
+
+## **Tech Stack**
+
+- **Next.js 16+** (App Router)  
+- **TypeScript**  
+- **Tailwind CSS**  
+- **React Hook Form + Zod** for form validation  
+- **Next.js Middleware** for route protection  
+
+---
+
+## **Installation & Setup**
+
+1. **Clone the repository**:  
 ```bash
+git clone https://github.com/yourusername/auth-task.git
+cd auth-task
+
+## **Install dependencies:
+
+- **npm install
+
+```Run the development server:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Open your browser at http://localhost:3000
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Usage
 
-## Learn More
+Login with any valid email and password (mock authentication).
 
-To learn more about Next.js, take a look at the following resources:
+If you forgot your password, click “Reset here” → enter your email → receive simulated OTP.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Enter the OTP to access the protected dashboard.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Note: This project uses mock authentication and cookies to simulate login state.
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+src/
+ └─ app/
+     ├─ (auth)/
+     │   ├─ login/
+     │   ├─ forgot-password/
+     │   ├─ otp/
+     │   └─ dashboard/
+     └─ page.tsx
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+(auth) contains all authentication-related pages.
+
+dashboard is a protected route only accessible after login or OTP verification.
+
+page.tsx is the landing page (customizable).
+
+Deployment
+
+This project is ready to be deployed on Vercel:
+
+Push your code to GitHub.
+
+Connect your GitHub repository in Vercel
+.
+
+Vercel will automatically detect the Next.js project and deploy it live.
+
+Future Improvements
+
+Integrate real backend authentication and OTP email service.
+
+Add remember me functionality.
+
+Improve accessibility and responsive design.
+
+License
+
+This project is open-source and free to use.
+
+When you paste this into a `README.md` on GitHub, **all headings, bold text, code blocks, lists, and links** will render correctly.  
+
+If you want, I can also **add some inline emojis** for visual appeal without making it unprofessional, like `✔️` for features completed or `⚠️` for notes.  
+
+Do you want me to do that next?
