@@ -7,7 +7,7 @@ import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useRouter } from 'next/navigation'
 
-// 1️⃣ Validation schema
+// 1️ Validation schema
 const loginSchema = z.object({
   email: z.string().email({ message: 'Invalid email address' }),
   password: z.string().min(6, { message: 'Password must be at least 6 characters' }),
@@ -17,7 +17,7 @@ type LoginFormInputs = z.infer<typeof loginSchema>
 
 export default function LoginPage() {
   const router = useRouter()
-  const [isLoggedIn, setIsLoggedIn] = React.useState(false) // ✅ state for side effect
+  const [isLoggedIn, setIsLoggedIn] = React.useState(false) // state for side effect
 
   const { register, handleSubmit, formState: { errors } } = useForm<LoginFormInputs>({
     resolver: zodResolver(loginSchema)
