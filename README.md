@@ -105,9 +105,3 @@ Improve accessibility and responsive design.
 License
 
 This project is open-source and free to use.
-
-When you paste this into a `README.md` on GitHub, **all headings, bold text, code blocks, lists, and links** will render correctly.  
-
-If you want, I can also **add some inline emojis** for visual appeal without making it unprofessional, like `✔️` for features completed or `⚠️` for notes.  
-
-Do you want me to do that next?
